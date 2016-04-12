@@ -64,21 +64,7 @@
         </mailingList>
     </mailingLists>
 
-    <prerequisites>
-        <maven>3.0.4</maven>
-    </prerequisites>
-
-  
-        <system>jenkins</system>
-        <url>https://junit.ci.cloudbees.com/</url>
-    </ciManagement>
-       <properties>
-        <jdkVersion>1.5</jdkVersion>
-        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-        <arguments />
-        <gpg.keyname>67893CC4</gpg.keyname>
-    </properties>
-
+       
     <dependencies>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -136,16 +122,9 @@
                                     </message>
                                     <version>[${project.prerequisites.maven},)</version>
                                 </requireMavenVersion>
-                                <requireJavaVersion>
-                                    <message>Current JDK version ${java.version} should be ${jdkVersion}, or higher!
-                                    </message>
-                                    <version>${jdkVersion}</version>
-                                </requireJavaVersion>
-                                <requireNoRepositories>
-                                    <message>Best Practice is to never define repositories in pom.xml (use a repository
-                                        manager instead).
-                                    </message>
-                                </requireNoRepositories>
+                               
+							  
+                               
                                 <requireReleaseDeps>
                                     <message>No Snapshots Dependencies Allowed!</message>
                                 </requireReleaseDeps>
